@@ -18,6 +18,9 @@ def eda_preeliminar (df):
   print("Duplicados")
   print(df.duplicated().sum())
   print("------------")
+  print('ESTADISTICOS NUMERICOS')
+  display(df.describe().T)
+  print('-------------')
   print("Frecuencia")
   categoric_columns = df.select_dtypes(include='O').columns
   for col in categoric_columns:
